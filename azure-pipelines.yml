@@ -1,0 +1,10 @@
+# Minimal pipeline: prints Hello World on commit
+trigger:
+- main   # runs whenever you push to the main branch
+
+pool:
+  vmImage: ubuntu-latest  # free Microsoft-hosted agent
+
+steps:
+- script: echo "Hello World!"
+  displayName: 'Print Hello World'
